@@ -1,5 +1,5 @@
 def editDistance(x, y): #The amount of edits that are necessary to make two sequences similar. 
-    # Create distance matrix
+    # Create a distance matrix
     D = []
     for i in range(len(x)+1):
         D.append([0]*(len(y)+1))
