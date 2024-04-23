@@ -53,4 +53,4 @@ def naive(p, t): #Algorithm that checks every read but guarantees accuracy when 
                 break
         if match:
             occurrences.append(i)  # all chars matched; record
-    return occurrences
+    return occurrences 
