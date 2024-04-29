@@ -64,7 +64,7 @@ def readGenome(filename): #Function for parsing a fasta file.
                 genome += line.rstrip()
     return genome
 ```
-##### Parsing FASTq Files
+##### Parsing FASTQ Files
 ```
 def readFastq(filename): #Function for parsing a fastq file with sequence and quality score.
     sequences = []
