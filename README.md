@@ -10,8 +10,38 @@ In biology, the central dogma is the main process by which DNA is transcribed to
 
 Reverse transcription, however, conflicts against this central dogma; reverse transcription is an important viral replication process that allows for insertion in the host's genome. 
 
-### Complementation and Reverse Complementation Code:
+### Complementation and Reverse Complementation Code (Python)
 
+def Complement(s):
+complement = {'A': 'T', 'C': 'G', 'G': 'C', 'T': 'A', 'N': 'N'}
+    t = ''
+    for base in s:
+        t = t + complement[base]
+    return t
+
+#### Example of Complement Use:
+def Complement(s):
+    complement = {'A': 'T', 'C': 'G', 'G': 'C', 'T': 'A', 'N': 'N'}
+    t = ''
+    for base in s:
+        t = t + complement[base]
+    return t
+
+print(Complement("TGTGGTGACACATG"))
+
+##### Result: ACACCACTGTGTAC
+
+#### Example of Reverse-Complement Use:
+
+def reverseComplement(s):
+    complement = {'A': 'T', 'C': 'G', 'G': 'C', 'T': 'A', 'N': 'N'}
+    t = ''
+    for base in s:
+        t = complement[base] + t
+    return t
+print(reverseComplement("TGTGGTGACACATG"))
+
+##### Result: CATGTGTCACCACA
 
 
 
