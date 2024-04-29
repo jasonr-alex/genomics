@@ -8,9 +8,10 @@ In biology, the central dogma is the main process by which DNA is transcribed to
 
 ![The Central Dogma Path](https://github.com/jasonr-alex/genomics/blob/main/Central-dogma.jpeg)
 
-Reverse transcription, however, conflicts against this central dogma; reverser transcription itself is an important viral replication process. 
+Reverse transcription, however, conflicts against this central dogma; reverse transcription is an important viral replication process that allows for insertion in the host's genome. 
 
-##Complementation and Reverse Complementation Code:
+### Complementation and Reverse Complementation Code:
+
 
 
 
