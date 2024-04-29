@@ -11,7 +11,7 @@ In biology, the central dogma is the main process by which DNA is transcribed to
 Reverse transcription, however, conflicts against this central dogma; reverse transcription is an important viral replication process that allows for insertion in the host's genome. 
 
 ### Complementation and Reverse Complementation Code (Python)
-
+```
 def Complement(s):
 complement = {'A': 'T', 'C': 'G', 'G': 'C', 'T': 'A', 'N': 'N'}
     t = ''
@@ -48,9 +48,39 @@ def reverseComplement(s):
 print(reverseComplement("TGTGGTGACACATG"))
 
 ##### Result: CATGTGTCACCACA
+```
+#### Handling FASTQ  and FASTA Files
+The major files in which genetic data is stored are referred to as fastq and fasta files. The primary format mentioned is a file format that stores the reads and the quality score associated with the reads; this is the major source of data created by NGS sequencers. The last format mentioned, fasta files, are found on the National Center of Biotechnology Information (NCBI) and store assembled genomic data. 
 
 
-
+##### Parsing FASTA Files
+```
+def readGenome(filename): #Function for parsing a fasta file. 
+    genome = ''
+    with open(filename, 'r') as f:
+        for line in f:
+            # ignore header line with genome information
+            if not line[0] == '>':
+                genome += line.rstrip()
+    return genome
+```
+##### Parsing FASTq Files
+```
+def readFastq(filename): #Function for parsing a fastq file with sequence and quality score.
+    sequences = []
+    qualities = []
+    with open(filename) as fh:
+        while True:
+            fh.readline()  # skip name line
+            seq = fh.readline().rstrip()  # read base sequence
+            fh.readline()  # skip placeholder line
+            qual = fh.readline().rstrip() # base quality line
+            if len(seq) == 0:
+                break
+            sequences.append(seq)
+            qualities.append(qual)
+    return sequences, qualities
+```
 
  
 
