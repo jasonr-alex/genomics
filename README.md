@@ -81,7 +81,7 @@ def readFastq(filename): #Function for parsing a fastq file with sequence and qu
             qualities.append(qual)
     return sequences, qualities
 ```
-
+Both these functions when executed should return a list of the genomic data, but in the case of the fastq function, it will also have the addition of a quality score associated with each base or read. It is also important to state that sequencing errors are a common occurrence, and having a higher quality score guarantees that the observed read is not due to error. 
  
 
 
