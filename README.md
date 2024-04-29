@@ -19,6 +19,13 @@ complement = {'A': 'T', 'C': 'G', 'G': 'C', 'T': 'A', 'N': 'N'}
         t = t + complement[base]
     return t
 
+def reverseComplement(s):
+    complement = {'A': 'T', 'C': 'G', 'G': 'C', 'T': 'A', 'N': 'N'}
+    t = ''
+    for base in s:
+        t = complement[base] + t
+    return t
+
 #### Example of Complement Use:
 def Complement(s):
     complement = {'A': 'T', 'C': 'G', 'G': 'C', 'T': 'A', 'N': 'N'}
@@ -27,8 +34,7 @@ def Complement(s):
         t = t + complement[base]
     return t
 
-print(Complement("TGTGGTGACACATG"))
-
+print(Complement("TGTGGTGACACATG")) 
 ##### Result: ACACCACTGTGTAC
 
 #### Example of Reverse-Complement Use:
@@ -38,7 +44,7 @@ def reverseComplement(s):
     t = ''
     for base in s:
         t = complement[base] + t
-    return t
+    return t  
 print(reverseComplement("TGTGGTGACACATG"))
 
 ##### Result: CATGTGTCACCACA
